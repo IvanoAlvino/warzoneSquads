@@ -1,0 +1,9 @@
+<div class="team-name" *ngFor="let team of teams">
+	<button mat-icon-button color="warn" class="remove-team-button">
+		<mat-icon (click)="removeTeam(team)">delete</mat-icon>
+	</button>
+
+	<span>{{team}}</span>
+</div>
+
+<input type="text" [(ngModel)]="newTeamName" (keyup.enter)="addTeam()"/>
