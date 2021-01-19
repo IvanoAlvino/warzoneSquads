@@ -1,0 +1,20 @@
+.team-name {
+	display: flex;
+	align-items: center;
+}
+
+.remove-team-button {
+	margin-right: 5px;
+}
+
+.teams-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	min-width: 150px;
+	width: 100%;
+}

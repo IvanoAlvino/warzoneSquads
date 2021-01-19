@@ -1,0 +1,13 @@
+<div class="container">
+	<teams-list [teams]="teams" class="teams-list"></teams-list>
+
+	<form class="form">
+		<mat-form-field class="input">
+			<mat-label>Enter new Team</mat-label>
+			<input matInput placeholder="Ex. Ughinese Calcio..." name="new-team-name"
+			       [(ngModel)]="newTeamName" (keyup.enter)="addTeam()">
+		</mat-form-field>
+	</form>
+
+	<button class="start-button" mat-flat-button color="primary">Start</button>
+</div>
