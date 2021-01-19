@@ -22,6 +22,7 @@ export class TeamsListComponent implements OnInit {
   public addTeam(): void
   {
     this.teams.push(this.newTeamName);
+    this.newTeamName = "";
   }
 
   public removeTeam(team: string)
