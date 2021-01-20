@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import {TeamsListService} from "../teams-list/teams-list.service";
+import {Team} from "../teams-list/Team";
 
 @Component({
   selector: 'app-setup-teams',
@@ -12,7 +13,7 @@ export class SetupTeamsComponent {
   /**
    * The list of already entered teams.
    */
-  public teams: string[];
+  public teams: Team[];
 
   public newTeamName: string = "";
 
@@ -23,7 +24,8 @@ export class SetupTeamsComponent {
 
   public addTeam(): void
   {
-    this.teams.push(this.newTeamName);
+    const newTeam = new Team(this.newTeamName);
+    this.teams.push(newTeam);
     this.newTeamName = "";
   }
 

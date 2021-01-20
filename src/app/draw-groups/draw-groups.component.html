@@ -4,7 +4,8 @@
 		<group [teams]="teamsSecondHalf"></group>
 	</div>
 
-	<button mat-flat-button color="primary" class="draw-button" (click)="drawNewTeamInGroup()">
+	<button mat-flat-button color="primary" class="draw-button" (click)="drawNewTeamInGroup()"
+		[disabled]="randomizedTeams.length === 0">
 		Draw new Team
 	</button>
 

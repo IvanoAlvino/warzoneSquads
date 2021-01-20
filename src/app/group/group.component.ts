@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Team} from "../teams-list/Team";
 
 @Component({
   selector: 'group',
@@ -8,7 +9,7 @@ import {Component, Input} from '@angular/core';
 export class GroupComponent {
 
   @Input()
-  public teams: string[];
+  public teams: Team[];
 
   constructor() { }
 }
