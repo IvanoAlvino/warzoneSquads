@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="all-teams">
+		<div class="first-half-teams-list">
+			<p *ngFor="let team of teamsFirstHalf">
+				{{team}}
+			</p>
+		</div>
+
+		<div class="second-half-teams-list">
+			<p *ngFor="let team of teamsSecondHalf">
+				{{team}}
+			</p>
+		</div>
+	</div>
+
+	<button mat-flat-button color="primary" class="draw-button">
+		Draw new Team
+	</button>
+</div>

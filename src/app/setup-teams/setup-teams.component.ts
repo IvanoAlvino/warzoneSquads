@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
+import {TeamsListService} from "../teams-list/teams-list.service";
 
 @Component({
   selector: 'app-setup-teams',
@@ -10,11 +12,14 @@ export class SetupTeamsComponent {
   /**
    * The list of already entered teams.
    */
-  public teams: string[] = ["Bwonu Nkolou", "Ughinese", "Cercinelgrano"];
+  public teams: string[];
 
   public newTeamName: string = "";
 
-  constructor() { }
+  constructor(private router: Router,
+              teamsListService: TeamsListService) {
+    this.teams = teamsListService.teams;
+  }
 
   public addTeam(): void
   {
@@ -22,4 +27,8 @@ export class SetupTeamsComponent {
     this.newTeamName = "";
   }
 
+  public startDrawing(): void
+  {
+    this.router.navigateByUrl("/draw").catch();
+  }
 }

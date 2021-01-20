@@ -11,12 +11,14 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { SetupTeamsComponent } from './setup-teams/setup-teams.component';
+import { DrawGroupsComponent } from './draw-groups/draw-groups.component';
 
 @NgModule({
   declarations: [
 	  AppComponent,
 	  TeamsListComponent,
-	  SetupTeamsComponent
+	  SetupTeamsComponent,
+	  DrawGroupsComponent
   ],
 	imports: [
 		BrowserModule,

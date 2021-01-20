@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
+import {TeamsListService} from "./teams-list.service";
 
 @Component({
   selector: 'teams-list',
@@ -10,10 +11,11 @@ export class TeamsListComponent {
   /**
    * The list of already entered teams.
    */
-  @Input()
   public teams: string[] = [];
 
-  constructor() { }
+  constructor(teamsListService: TeamsListService) {
+    this.teams = teamsListService.teams;
+  }
 
   public removeTeam(team: string)
   {
