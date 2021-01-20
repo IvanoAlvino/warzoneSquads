@@ -1,19 +1,14 @@
 <div class="container">
 	<div class="all-teams">
-		<div class="first-half-teams-list">
-			<p *ngFor="let team of teamsFirstHalf">
-				{{team}}
-			</p>
-		</div>
-
-		<div class="second-half-teams-list">
-			<p *ngFor="let team of teamsSecondHalf">
-				{{team}}
-			</p>
-		</div>
+		<group [teams]="teamsFirstHalf"></group>
+		<group [teams]="teamsSecondHalf"></group>
 	</div>
 
-	<button mat-flat-button color="primary" class="draw-button">
+	<button mat-flat-button color="primary" class="draw-button" (click)="drawNewTeamInGroup()">
 		Draw new Team
 	</button>
+
+	<div class="grouped-teams">
+		<group *ngFor="let group of groups" [teams]="group.teams"></group>
+	</div>
 </div>

@@ -12,13 +12,15 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { SetupTeamsComponent } from './setup-teams/setup-teams.component';
 import { DrawGroupsComponent } from './draw-groups/draw-groups.component';
+import { GroupComponent } from './group/group.component';
 
 @NgModule({
   declarations: [
 	  AppComponent,
 	  TeamsListComponent,
 	  SetupTeamsComponent,
-	  DrawGroupsComponent
+	  DrawGroupsComponent,
+	  GroupComponent
   ],
 	imports: [
 		BrowserModule,

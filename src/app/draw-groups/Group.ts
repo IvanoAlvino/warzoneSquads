@@ -9,5 +9,5 @@ export class Group {
 		this._teams = value;
 	}
 
-	private _teams: string[];
+	private _teams: string[] = [];
 }
