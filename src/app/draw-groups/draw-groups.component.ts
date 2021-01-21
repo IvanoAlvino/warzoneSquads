@@ -56,7 +56,7 @@ export class DrawGroupsComponent {
   public drawNewTeamInGroup(): void
   {
     const randomTeam = this.randomizedTeams.shift();
-    this.groups[this.currentGroup].teams.push(randomTeam);
+    this.groups[this.currentGroup].teams.push(Object.assign({}, randomTeam));
     this.currentGroup = (this.currentGroup + 1) % this.groups.length;
     this.markTeamAsExtracted(randomTeam);
   }

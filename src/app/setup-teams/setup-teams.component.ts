@@ -38,4 +38,9 @@ export class SetupTeamsComponent {
   {
     this.router.navigateByUrl("/draw").catch();
   }
+
+  public isStartButtonDisabled(): boolean
+  {
+    return this.teams.length === 0 || this.teams.length % 2 !== 0;
+  }
 }

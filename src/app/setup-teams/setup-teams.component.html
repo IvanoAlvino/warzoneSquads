@@ -9,8 +9,11 @@
 		</mat-form-field>
 	</form>
 
-	<button class="start-button" mat-flat-button color="primary" (click)="startDrawing()"
-		[disabled]="teams.length === 0 || teams.length % 2 !== 0">
-		Start
-	</button>
+	<div matTooltip="You need an even number of teams to proceed"
+	     [matTooltipDisabled]="!isStartButtonDisabled()">
+		<button class="start-button" mat-flat-button color="primary" (click)="startDrawing()"
+			[disabled]="isStartButtonDisabled()">
+			Start
+		</button>
+	</div>
 </div>

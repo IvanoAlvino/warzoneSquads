@@ -13,6 +13,7 @@ import {MatInputModule} from "@angular/material/input";
 import { SetupTeamsComponent } from './setup-teams/setup-teams.component';
 import { DrawGroupsComponent } from './draw-groups/draw-groups.component';
 import { GroupComponent } from './group/group.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { GroupComponent } from './group/group.component';
 		AppRoutingModule,
 		MatFormFieldModule,
 		MatInputModule,
+		MatTooltipModule,
 	],
   providers: [],
   bootstrap: [AppComponent]
