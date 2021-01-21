@@ -24,6 +24,11 @@ export class SetupTeamsComponent {
 
   public addTeam(): void
   {
+    if (!this.newTeamName || this.newTeamName.trim().length === 0)
+    {
+      this.newTeamName = "";
+      return;
+    }
     const newTeam = new Team(this.newTeamName);
     this.teams.push(newTeam);
     this.newTeamName = "";
