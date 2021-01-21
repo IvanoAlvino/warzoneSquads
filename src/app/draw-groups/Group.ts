@@ -1,5 +1,5 @@
-import {Team} from "../teams-list/Team";
+import {Team} from '../teams-list/Team';
 
 export class Group {
-	public teams: Team[] = [];
+  public teams: Team[] = [];
 }

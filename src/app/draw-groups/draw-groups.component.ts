@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {TeamsListService} from "../teams-list/teams-list.service";
-import {Group} from "./Group";
-import {Team} from "../teams-list/Team";
+import {ActivatedRoute} from '@angular/router';
+import {TeamsListService} from '../teams-list/teams-list.service';
+import {Group} from './Group';
+import {Team} from '../teams-list/Team';
 
 @Component({
   selector: 'draw-groups',
@@ -33,7 +33,7 @@ export class DrawGroupsComponent {
   /**
    * A reference to the group where the next extracted team will go.
    */
-  private currentGroup: number = 0;
+  private currentGroup = 0;
 
   constructor(private route: ActivatedRoute,
               private teamsListService: TeamsListService) {
@@ -63,7 +63,9 @@ export class DrawGroupsComponent {
 
   public shuffle(teams: Team[]): Team[]
   {
-    let currentIndex = teams.length, temporaryValue, randomIndex;
+    let currentIndex = teams.length;
+    let temporaryValue;
+    let randomIndex;
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
-import {TeamsListService} from "../teams-list/teams-list.service";
-import {Team} from "../teams-list/Team";
+import {Router} from '@angular/router';
+import {TeamsListService} from '../teams-list/teams-list.service';
+import {Team} from '../teams-list/Team';
 
 @Component({
   selector: 'app-setup-teams',
@@ -15,7 +15,7 @@ export class SetupTeamsComponent {
    */
   public teams: Team[];
 
-  public newTeamName: string = "";
+  public newTeamName = '';
 
   constructor(private router: Router,
               teamsListService: TeamsListService) {
@@ -26,17 +26,17 @@ export class SetupTeamsComponent {
   {
     if (!this.newTeamName || this.newTeamName.trim().length === 0)
     {
-      this.newTeamName = "";
+      this.newTeamName = '';
       return;
     }
     const newTeam = new Team(this.newTeamName);
     this.teams.push(newTeam);
-    this.newTeamName = "";
+    this.newTeamName = '';
   }
 
   public startDrawing(): void
   {
-    this.router.navigateByUrl("/draw").catch();
+    this.router.navigateByUrl('/draw').catch();
   }
 
   public isStartButtonDisabled(): boolean

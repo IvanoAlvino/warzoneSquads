@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {TeamsListService} from "./teams-list.service";
-import {Team} from "./Team";
+import {TeamsListService} from './teams-list.service';
+import {Team} from './Team';
 
 @Component({
   selector: 'teams-list',
@@ -22,7 +22,7 @@ export class TeamsListComponent {
    * Remove the given teamToRemove from the list of teams.
    * @param teamToRemove The team to remove
    */
-  public removeTeam(teamToRemove: Team)
+  public removeTeam(teamToRemove: Team): void
   {
     const index = this.teams.indexOf(teamToRemove);
     this.teams.splice(index, 1);

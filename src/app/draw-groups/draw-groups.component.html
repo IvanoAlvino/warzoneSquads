@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="all-teams">
-		<group [teams]="teamsFirstHalf"></group>
-		<group [teams]="teamsSecondHalf"></group>
+		<teams-group [teams]="teamsFirstHalf"></teams-group>
+		<teams-group [teams]="teamsSecondHalf"></teams-group>
 	</div>
 
 	<button mat-flat-button color="primary" class="draw-button" (click)="drawNewTeamInGroup()"
@@ -10,6 +10,6 @@
 	</button>
 
 	<div class="grouped-teams">
-		<group *ngFor="let group of groups" [teams]="group.teams"></group>
+		<teams-group *ngFor="let group of groups" [teams]="group.teams"></teams-group>
 	</div>
 </div>
