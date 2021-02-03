@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Team} from '../teams-list/Team';
 
 @Component({
@@ -6,10 +6,23 @@ import {Team} from '../teams-list/Team';
   templateUrl: './group.component.html',
   styleUrls: ['./group.component.scss']
 })
-export class GroupComponent {
+export class GroupComponent implements OnInit {
 
   @Input()
   public teams: Team[];
 
-  constructor() { }
+  @Input()
+  public groupName: string;
+
+  @Input()
+  public borderColor: string;
+
+  @Input()
+  public showBorder = false;
+
+  public ngOnInit(): void {
+    if (!this.borderColor) {
+      this.borderColor = 'black';
+    }
+  }
 }

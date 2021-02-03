@@ -10,6 +10,11 @@
 	</button>
 
 	<div class="grouped-teams">
-		<teams-group *ngFor="let group of groups" [teams]="group.teams"></teams-group>
+		<teams-group *ngFor="let group of groups" class="team-group"
+                 [teams]="group.teams"
+                 [groupName]="group.name"
+                 [showBorder]="true"
+                 [borderColor]="'lightgrey'">
+    </teams-group>
 	</div>
 </div>

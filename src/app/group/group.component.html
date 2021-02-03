@@ -1,3 +1,7 @@
-<p *ngFor="let team of teams" [class.extracted]="team.extracted">
-	{{ team.name }}
-</p>
+<div class="group-container"
+     [ngStyle]="showBorder ? {'border': '1px solid ' + borderColor} : null">
+  <h1 *ngIf="groupName">{{ groupName }}</h1>
+  <p *ngFor="let team of teams" [class.extracted]="team.extracted">
+    {{ team.name }}
+  </p>
+</div>

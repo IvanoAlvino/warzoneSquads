@@ -23,7 +23,7 @@ export class DrawGroupsComponent {
   /**
    * The groups where the {@link teams} will be distributed.
    */
-  public groups: Group[] = [new Group(), new Group()];
+  public groups: Group[] = [new Group('A'), new Group('B')];
 
   /**
    * A copy of the teams array that is randomized.
