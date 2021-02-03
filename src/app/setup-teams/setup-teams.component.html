@@ -9,7 +9,7 @@
 		</mat-form-field>
 	</form>
 
-	<div matTooltip="You need an even number of teams to proceed"
+	<div matTooltip="You need at least one team to proceed" class="buttons-container"
 	     [matTooltipDisabled]="!isStartButtonDisabled()">
 		<button class="start-button" mat-flat-button color="primary" (click)="startDrawing()"
 			[disabled]="isStartButtonDisabled()">

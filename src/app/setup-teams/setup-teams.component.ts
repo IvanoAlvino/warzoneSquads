@@ -41,6 +41,6 @@ export class SetupTeamsComponent {
 
   public isStartButtonDisabled(): boolean
   {
-    return this.teams.length === 0 || this.teams.length % 2 !== 0;
+    return this.teams.length === 0;
   }
 }
