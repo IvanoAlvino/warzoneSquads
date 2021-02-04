@@ -5,7 +5,7 @@
 		<mat-form-field class="input">
 			<mat-label>Enter new Team</mat-label>
 			<input matInput placeholder="Ex. Ughinese Calcio..." name="new-team-name"
-			       [(ngModel)]="newTeamName" (keyup.enter)="addTeam()">
+			       [(ngModel)]="newTeamName" (keyup.enter)="addTeam()" (focusout)="addTeam()">
 		</mat-form-field>
 	</form>
 
