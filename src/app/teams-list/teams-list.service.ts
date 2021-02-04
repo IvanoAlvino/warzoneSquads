@@ -9,7 +9,8 @@ export class TeamsListService {
   /**
    * The list of already entered teams.
    */
-  public teams: Team[] = [{name: 'alberto', extracted: false}, {name: 'luigi', extracted: false},
-    {name: 'fausto', extracted: false}, {name: 'ivano', extracted: false}, {name: 'danny', extracted: false},
-    {name: 'tony', extracted: false}, {name: 'melo', extracted: false}, {name: 'toju', extracted: false}];
+  public teams: Team[] = [{name: 'Ughinese Calcio', extracted: false}, {name: 'Bwonu Nkolou', extracted: false},
+    {name: 'Polisportiva Camisola', extracted: false}, {name: 'ST PETER&PAULI', extracted: false},
+    {name: 'Cercinelgrano', extracted: false}, {name: 'Aciclovir', extracted: false},
+    {name: 'Atletico Gullo', extracted: false}, {name: 'TORINOIZ', extracted: false}];
 }
