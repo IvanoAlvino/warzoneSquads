@@ -18,11 +18,18 @@ export class GroupComponent implements OnInit {
   public borderColor: string;
 
   @Input()
+  public borderSize: string;
+
+  @Input()
   public showBorder = false;
 
   public ngOnInit(): void {
     if (!this.borderColor) {
       this.borderColor = 'black';
+    }
+
+    if (!this.borderSize) {
+      this.borderSize = '1';
     }
   }
 }

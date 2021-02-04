@@ -14,7 +14,8 @@
                  [teams]="group.teams"
                  [groupName]="group.name"
                  [showBorder]="true"
-                 [borderColor]="'lightgrey'">
+                 [borderSize]="randomizedTeams.length === 0 ? '5' : '1'"
+                 [borderColor]="randomizedTeams.length === 0 ? 'green' : 'lightgrey'">
     </teams-group>
 	</div>
 </div>
