@@ -14,6 +14,7 @@ import { SetupTeamsComponent } from './setup-teams/setup-teams.component';
 import { DrawGroupsComponent } from './draw-groups/draw-groups.component';
 import { GroupComponent } from './group/group.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -23,18 +24,19 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     DrawGroupsComponent,
     GroupComponent
   ],
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatButtonModule,
-    FormsModule,
-    AppRoutingModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTooltipModule,
-  ],
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatButtonModule,
+        FormsModule,
+        AppRoutingModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTooltipModule,
+        MatSelectModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

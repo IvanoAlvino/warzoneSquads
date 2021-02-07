@@ -15,11 +15,14 @@ export class SetupTeamsComponent {
    */
   public teams: Team[];
 
+  /**
+   * The name of the new entered team.
+   */
   public newTeamName = '';
 
   constructor(private router: Router,
-              teamsListService: TeamsListService) {
-    this.teams = teamsListService.teams;
+              public teamsListService: TeamsListService) {
+    this.teams = this.teamsListService.teams;
   }
 
   public addTeam(): void
@@ -41,6 +44,6 @@ export class SetupTeamsComponent {
 
   public isStartButtonDisabled(): boolean
   {
-    return this.teams.length === 0;
+    return this.teams.length < 2;
   }
 }

@@ -9,7 +9,16 @@
 		</mat-form-field>
 	</form>
 
-	<div matTooltip="You need at least one team to proceed" class="buttons-container"
+  <mat-form-field appearance="fill" class="centered-text">
+    <mat-label>Groups</mat-label>
+    <mat-select [(value)]="teamsListService.groupsNumber">
+      <mat-option *ngFor="let groupNumber of [2, 3, 4, 5]" [value]="groupNumber" class="centered-text">
+        {{ groupNumber }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+	<div matTooltip="You need at least two teams to proceed"
 	     [matTooltipDisabled]="!isStartButtonDisabled()">
 		<button class="start-button" mat-flat-button color="primary" (click)="startDrawing()"
 			[disabled]="isStartButtonDisabled()">

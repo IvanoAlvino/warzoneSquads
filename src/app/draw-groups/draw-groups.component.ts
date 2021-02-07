@@ -23,7 +23,7 @@ export class DrawGroupsComponent {
   /**
    * The groups where the {@link teams} will be distributed.
    */
-  public groups: Group[] = [new Group('A'), new Group('B')];
+  public groups: Group[] = [];
 
   /**
    * A copy of the teams array that is randomized.
@@ -48,6 +48,10 @@ export class DrawGroupsComponent {
 
     // Init variables
     this.currentGroup = 0;
+    for (let i = 0; i < this.teamsListService.groupsNumber; i++) {
+      const alphabetChar = String.fromCharCode(65 + i);
+      this.groups.push(new Group(alphabetChar));
+    }
 
     // Shuffle array of teams
     this.randomizedTeams = this.shuffle(this.teamsFirstHalf.concat(this.teamsSecondHalf));
