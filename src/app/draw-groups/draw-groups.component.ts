@@ -35,6 +35,13 @@ export class DrawGroupsComponent {
    */
   private currentGroup = 0;
 
+  /**
+   * Available names for the groups.
+   */
+  private groupNames: string[] = ['I Maestri del Gulag', 'El Team de Fuego', 'I King della Corona', 'Poco danno molte Kill',
+    'Gulag di Sera bel Match si Spera', 'Chi parte dal Gulag uccide due volte', 'EL CHEATERON!', 'DMR e MAC10', 'Nel Bagno col Pompa',
+    'Solo Bandiere'];
+
   constructor(private route: ActivatedRoute,
               private teamsListService: TeamsListService) {
     // Clone the Team array
@@ -48,13 +55,17 @@ export class DrawGroupsComponent {
 
     // Init variables
     this.currentGroup = 0;
-    for (let i = 0; i < this.teamsListService.groupsNumber; i++) {
-      const alphabetChar = String.fromCharCode(65 + i);
-      this.groups.push(new Group(alphabetChar));
-    }
+    this.initGroups();
 
     // Shuffle array of teams
     this.randomizedTeams = this.shuffle(this.teamsFirstHalf.concat(this.teamsSecondHalf));
+  }
+
+  private initGroups(): void {
+    const randomGroupNames = this.shuffle(this.groupNames);
+    for (let i = 0; i < this.teamsListService.groupsNumber; i++) {
+      this.groups.push(new Group(randomGroupNames[i]));
+    }
   }
 
   public drawNewTeamInGroup(): void
@@ -65,7 +76,7 @@ export class DrawGroupsComponent {
     this.markTeamAsExtracted(randomTeam);
   }
 
-  public shuffle(teams: Team[]): Team[]
+  public shuffle(teams: any[]): any[]
   {
     let currentIndex = teams.length;
     let temporaryValue;
