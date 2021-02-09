@@ -1,6 +1,6 @@
 <div class="team-name" *ngFor="let team of teams">
 	<button mat-icon-button color="primary" class="remove-team-button">
-		<mat-icon (click)="removeTeam(team)">delete</mat-icon>
+		<mat-icon (click)="removeTeam(team)" class="bin-icon">delete</mat-icon>
 	</button>
 
 	<span>{{ team.name }}</span>

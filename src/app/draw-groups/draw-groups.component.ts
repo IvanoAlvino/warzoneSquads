@@ -39,8 +39,8 @@ export class DrawGroupsComponent {
    * Available names for the groups.
    */
   private groupNames: string[] = ['I Maestri del Gulag', 'El Team de Fuego', 'I King della Corona', 'Poco danno molte Kill',
-    'Gulag di Sera bel Match si Spera', 'Chi parte dal Gulag uccide due volte', 'EL CHEATERON!', 'DMR e MAC10', 'Nel Bagno col Pompa',
-    'Solo Bandiere'];
+    'Gli SparaCazzate', 'A pugni nel Gulag', 'I CHEATERS', 'DMR e MAC10', 'Col Pompa nel Bagno',
+    'Solo Bandiere', '"Questi mi puzzano"', 'Mi hanno Laserato'];
 
   constructor(private route: ActivatedRoute,
               private teamsListService: TeamsListService) {

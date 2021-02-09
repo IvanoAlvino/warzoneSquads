@@ -20,3 +20,31 @@
 .centered-text {
   text-align: center;
 }
+
+::ng-deep.mat-form-field-ripple {
+  background-color: white !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  background-color: white !important;
+}
+
+::ng-deep.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: white;
+}
+
+::ng-deep.mat-select-value-text {
+  font-size: 18px;
+  padding-left: 15px
+}
+
+.select-block {
+  mat-form-field {
+    .mat-form-field-wrapper {
+      .mat-form-field-underline {
+        display: none !important;
+      }
+    }
+  }
+}
+

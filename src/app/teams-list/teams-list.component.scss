@@ -1,6 +1,7 @@
 .team-name {
 	display: flex;
 	align-items: center;
+  color: white;
 }
 
 .remove-team-button {
@@ -17,4 +18,8 @@
 .form {
 	min-width: 150px;
 	width: 100%;
+}
+
+.bin-icon {
+  color: chocolate;
 }

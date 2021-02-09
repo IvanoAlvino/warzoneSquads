@@ -3,20 +3,22 @@
 
 	<form class="form">
 		<mat-form-field class="input">
-			<mat-label>Enter new Player</mat-label>
-			<input matInput placeholder="Ex. Ughinese Calcio..." name="new-team-name"
+			<mat-label class="white-text-color">Enter new Player</mat-label>
+			<input matInput placeholder="Ex. Ughinese Calcio..." name="new-team-name" class="white-text-color"
 			       [(ngModel)]="newTeamName" (keyup.enter)="addTeam()" (focusout)="addTeam()">
 		</mat-form-field>
 	</form>
 
-  <mat-form-field appearance="fill" class="centered-text">
-    <mat-label>Groups</mat-label>
-    <mat-select [(value)]="teamsListService.groupsNumber">
-      <mat-option *ngFor="let groupNumber of [2, 3, 4, 5]" [value]="groupNumber" class="centered-text">
-        {{ groupNumber }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+  <div class="select-box">
+    <mat-form-field appearance="fill" class="centered-text">
+      <mat-label>Groups</mat-label>
+      <mat-select [(value)]="teamsListService.groupsNumber">
+        <mat-option *ngFor="let groupNumber of [2, 3, 4, 5]" [value]="groupNumber" class="centered-text">
+          {{ groupNumber }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 
 	<div matTooltip="You need at least two teams to proceed"
 	     [matTooltipDisabled]="!isStartButtonDisabled()">
